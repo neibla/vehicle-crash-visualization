@@ -1,0 +1,147 @@
+[
+  {
+    "id": "mapControls",
+    "label": "Map Controls",
+    "type": "group",
+    "children": [
+      {
+        "id": "showHexagons",
+        "label": "Show Hexagons",
+        "type": "checkbox",
+        "value": true
+      },
+      {
+        "id": "hexagonRadius",
+        "label": "Hexagon Radius",
+        "type": "slider",
+        "value": 300,
+        "min": 10,
+        "max": 400,
+        "step": 10
+      },
+      {
+        "id": "mapStyle",
+        "label": "Map Style",
+        "type": "select",
+        "value": "mapbox://styles/mapbox/dark-v10",
+        "options": [
+          {
+            "label": "Satellite",
+            "value": "mapbox://styles/mapbox/satellite-v9"
+          },
+
+          {
+            "label": "Dark",
+            "value": "mapbox://styles/mapbox/dark-v10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dataControls",
+    "label": "Data Controls",
+    "type": "group",
+    "children": [
+      {
+        "id": "showFatalCrashes",
+        "label": "Show Fatal Crashes",
+        "type": "checkbox",
+        "value": true
+      },
+      {
+        "id": "showSeriousCrashes",
+        "label": "Show Serious Crashes",
+        "type": "checkbox",
+        "value": true
+      },
+      {
+        "id": "showMinorCrashes",
+        "label": "Show Minor Crashes",
+        "type": "checkbox",
+        "value": true
+      },
+      {
+        "id": "onlyShowHolidayCrashes",
+        "label": "Only Show Holiday Crashes",
+        "type": "checkbox",
+        "value": false
+      },
+      {
+        "id": "yearRange",
+        "label": "Period",
+        "type": "slider",
+        "range": true,
+        "tooltipVisible": true,
+        "value": [2000, 2018],
+        "min": 2000,
+        "max": 2018,
+        "step": 1
+      },
+      {
+        "id": "crashInvolvement",
+        "label": "Crash Involvement",
+        "type": "select",
+        "value": "all",
+        "options": [
+          {
+            "label": "All",
+            "value": "all"
+          },
+          {
+            "label": "Truck",
+            "value": "truck"
+          },
+          {
+            "label": "Train",
+            "value": "train"
+          },
+          {
+            "label": "Car/Station Wagon",
+            "value": "carStationWagons"
+          },
+          {
+            "label": "SUV",
+            "value": "suv"
+          },
+          {
+            "label": "Van/Utility Vehicle",
+            "value": "vanOrUtility"
+          },
+          {
+            "label": "Other Vehicle",
+            "value": "otherVehicles"
+          },
+          {
+            "label": "Taxi",
+            "value": "taxi"
+          },
+          {
+            "label": "Bus",
+            "value": "bus"
+          },
+          {
+            "label": "School Bus",
+            "value": "schoolbus"
+          },
+          {
+            "label": "Motorcycle",
+            "value": "motorcycle"
+          },
+          {
+            "label": "Moped",
+            "value": "moped"
+          },
+          {
+            "label": "Bicycle",
+            "value": "bicycle"
+          },
+          {
+            "label": "Pedestrian",
+            "value": "pedestrians"
+          }
+        ]
+      }
+    ]
+  }
+]
