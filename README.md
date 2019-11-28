@@ -5,6 +5,8 @@ Being able to analyse crash sites and statistics is important as [motor vehicle 
 
 The purpose of this project is to improve visual analysis of crash sites for identifying key issues on our road networks.
 
+[Live Demo](https://nzcrashes.neilblake.dev/)
+
 [1]: https://www.transport.govt.nz/mot-resources/road-safety-resources/roadcrashstatistics/social-cost-of-road-crashes-and-injuries/report-overview/
 [2]: http://archive.stats.govt.nz/browse_for_stats/snapshots-of-nz/nz-social-indicators/Home/Individual%20safety%20and%20security/m-v-casualties.aspx
 
@@ -33,7 +35,7 @@ yarn via (on MacOS)
 brew install yarn
 ```
 
-# Mapbox Access Token
+### Mapbox Access Token
 1. create the following file at the root:
 ```
 .env.development.local
