@@ -43,7 +43,11 @@ function Control({ definition, value, dispatch, groupId }) {
       return (
         <div key={id}>
           <div>{definition.label}</div>
-          <Select defaultValue={definition.value} onChange={onChange}>
+          <Select
+            style={{ width: "100%" }}
+            defaultValue={definition.value}
+            onChange={onChange}
+          >
             {definition.options.map(option => (
               <Select.Option value={option.value} key={option.value}>
                 {option.label}

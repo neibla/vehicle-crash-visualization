@@ -16,6 +16,7 @@ import CrashDataTable from "./CrashDataTable";
 import mapLayers from "./mapLayers";
 import controlDefinitions from "./controlDefinitions.json";
 import useControls from "./Controls";
+import "./App.css";
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MapboxAcessToken;
 
@@ -143,10 +144,15 @@ export default () => {
         onClick={() => {
           if (hovered && hovered.data) {
             Modal.info({
-              title: `${hovered.data.length} Crash${data.length > 1 ? "es" : ""}`,
+              title: `${hovered.data.length} Crash${
+                data.length > 1 ? "es" : ""
+              }`,
               autoFocusButton: null,
               maskClosable: true,
               width: "1200px",
+              okButtonProps: {
+                style: {float: "left"}
+              },
               content: (
                 <div style={{ overflow: "auto" }}>
                   <CrashDataTable hoveredData={hovered} relativeView={true} />

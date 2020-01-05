@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "antd";
 import { CSVLink } from "react-csv";
+import "./CrashDataTable.css";
 
 const googleMapsLink = ({ latitude, longitude }) =>
   `http://maps.google.com/maps?q=loc:${longitude},${latitude}`;
@@ -51,6 +52,7 @@ export default function({ hoveredData }) {
       dataSource={data}
       columns={columns}
       pagination={false}
+      bordered
     />
   ];
 }
