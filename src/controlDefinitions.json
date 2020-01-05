@@ -29,10 +29,13 @@
             "label": "Satellite",
             "value": "mapbox://styles/mapbox/satellite-v9"
           },
-
           {
             "label": "Dark",
             "value": "mapbox://styles/mapbox/dark-v10"
+          },
+          {
+            "label": "Light",
+            "value": "mapbox://styles/mapbox/light-v10"
           }
         ]
       }
@@ -45,25 +48,25 @@
     "children": [
       {
         "id": "showFatalCrashes",
-        "label": "Show Fatal Crashes",
+        "label": "Fatal crashes",
         "type": "checkbox",
         "value": true
       },
       {
         "id": "showSeriousCrashes",
-        "label": "Show Serious Crashes",
+        "label": "Crashes with serious injuries",
         "type": "checkbox",
         "value": true
       },
       {
         "id": "showMinorCrashes",
-        "label": "Show Minor Crashes",
+        "label": "Crashes with minor injuries",
         "type": "checkbox",
         "value": true
       },
       {
         "id": "onlyShowHolidayCrashes",
-        "label": "Only Show Holiday Crashes",
+        "label": "Only show holiday crashes",
         "type": "checkbox",
         "value": false
       },
