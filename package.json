@@ -10,7 +10,7 @@
     "react-csv": "^1.1.2",
     "react-dom": "^16.12.0",
     "react-feather": "^2.0.3",
-    "react-map-gl": "^5.1.7",
+    "react-map-gl": "^5.2.0",
     "react-scripts": "3.3.0"
   },
   "scripts": {
