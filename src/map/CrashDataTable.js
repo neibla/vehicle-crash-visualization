@@ -29,13 +29,15 @@ export default function({ hoveredData }) {
   }
   const { data, fields } = hoveredData;
 
-  const columns = fields.map(field => ({
-    title: field,
-    label: field,
-    dataIndex: field,
-    key: field === "id" ? "idcolumn" : field,
-    render: cellRender(field)
-  }));
+  const columns = fields
+    .filter(field => field !== "screenCoord")
+    .map(field => ({
+      title: field,
+      label: field,
+      dataIndex: field,
+      key: field === "id" ? "idcolumn" : field,
+      render: cellRender(field)
+    }));
 
   return [
     <CSVLink

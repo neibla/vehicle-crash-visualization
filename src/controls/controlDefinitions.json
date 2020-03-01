@@ -76,9 +76,9 @@
         "type": "slider",
         "range": true,
         "tooltipVisible": true,
-        "value": [2000, 2018],
+        "value": [2000, 2019],
         "min": 2000,
-        "max": 2018,
+        "max": 2019,
         "step": 1
       },
       {

@@ -2,11 +2,11 @@ import React from "react";
 import { Table } from "antd";
 
 const hoverViewColumns = [
-  "year",
-  "severity",
-  "minorInjuries",
-  "seriousInjuries",
-  "fatalities"
+  "crashYear",
+  "crashSeverity",
+  "fatalCount",
+  "minorInjuryCount",
+  "seriousInjuryCount"
 ].map(field => ({
   title: field,
   label: field,

@@ -33,8 +33,7 @@ function resolveScatterPlotColour({
 
 export default function(data, controls, onHover) {
   const { hexagonRadius, showHexagons } = controls;
-
-  return [
+  const layers = [
     new ScatterplotLayer({
       id: "scatterplot",
       getPosition: d => [d.latitude, d.longitude],
@@ -51,20 +50,24 @@ export default function(data, controls, onHover) {
       lineWidthMinPixels: 1,
       data,
       onHover: showHexagons ? null : onHover
-    }),
-    showHexagons &&
-      new HexagonLayer({
-        id: "heatmap",
-        data,
-        colorRange,
-        elevationRange: [0, 2e2],
-        elevationScale: 30,
-        extruded: true,
-        getPosition: d => [d.latitude, d.longitude],
-        opacity: 1,
-        pickable: Boolean(onHover),
-        radius: hexagonRadius,
-        onHover
-      })
+    })
   ];
+  if (showHexagons) {
+    const hexLayer = new HexagonLayer({
+      id: "heatmap",
+      data,
+      colorRange,
+      elevationRange: [0, 2e2],
+      elevationScale: 30,
+      extruded: true,
+      getPosition: d => [d.latitude, d.longitude],
+      opacity: 1,
+      pickable: Boolean(onHover),
+      radius: hexagonRadius,
+      onHover
+    });
+    window.hexLayer = hexLayer;
+    layers.push(hexLayer);
+  }
+  return layers;
 }
