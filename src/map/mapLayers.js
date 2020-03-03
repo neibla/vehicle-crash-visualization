@@ -66,7 +66,6 @@ export default function(data, controls, onHover) {
       radius: hexagonRadius,
       onHover
     });
-    window.hexLayer = hexLayer;
     layers.push(hexLayer);
   }
   return layers;

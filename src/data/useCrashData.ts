@@ -1,8 +1,8 @@
-import { useState, useEffect,useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
-import { csv } from "d3-request";
 import Crash from "./Crash";
 import { includeCrash } from "./filters";
+import Papa from "papaparse";
 
 const initDataState = {
   loading: true,
@@ -14,36 +14,31 @@ interface IDataState {
   error?: Error;
 }
 
-function caster(row: any) {
-  const result = { ...row };
-  for (const key of Object.keys(row)) {
-    const castedNumber = Number(row[key]);
-    if (!Number.isNaN(castedNumber)) {
-      result[key] = castedNumber;
-    }
-  }
-  return result;
-}
-
-function useRawCrashData(url:string): IDataState {
+function useRawCrashData(url: string): IDataState {
   const [state, setState] = useState<IDataState>(initDataState);
 
   useEffect(() => {
-    csv(url, caster, (error, data) => {
-      if (error) {
-        console.error(
-          "Error occurred getting data from ",
-          process.env.REACT_APP_DATA_URL,
-          error
-        );
-        setState({ error });
-        return;
+    Papa.parse(url, {
+      download: true,
+      dynamicTyping: true,
+      header: true,
+      skipEmptyLines: true,
+      // worker: true,
+      complete: function (results: any, file: any) {
+        if (results.errors.length>0) {
+          console.error(
+            "Error occurred getting data from ",
+            process.env.REACT_APP_DATA_URL,
+            JSON.stringify(results.errors)
+          );
+          setState({ error: new Error("Unexpected Error loading data") });
+          return;
+        }
+        setState({ data: results.data })
       }
-      const result = data as unknown as Crash[];
-      setState({ data: result });
-    });
-  }, [url]);
+    })
 
+  }, [url]);
   return state;
 }
 
@@ -61,5 +56,5 @@ export default function useCrashData(filters: object): IDataState {
     [filters, data]
   );
 
-  return {...state, data: filteredData};
+  return { ...state, data: filteredData };
 }
