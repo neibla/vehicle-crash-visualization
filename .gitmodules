@@ -1,0 +1,3 @@
+[submodule "nz-crash-data"]
+	path = nz-crash-data
+	url = https://github.com/neibla/nz-crash-data
