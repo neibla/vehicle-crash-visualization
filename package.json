@@ -8,7 +8,7 @@
     "deck.gl": "^8.0.16",
     "papaparse": "^5.1.1",
     "react": "^16.13.1",
-    "react-csv": "^2.0.1",
+    "react-csv": "^2.0.3",
     "react-dom": "^16.13.0",
     "react-feather": "^2.0.3",
     "react-map-gl": "^5.2.3",
