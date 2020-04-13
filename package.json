@@ -4,7 +4,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/papaparse": "^5.0.3",
-    "antd": "^4.0.4",
+    "antd": "^4.1.2",
     "deck.gl": "^8.0.16",
     "papaparse": "^5.1.1",
     "react": "^16.13.1",
