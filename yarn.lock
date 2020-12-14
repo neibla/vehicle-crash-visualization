@@ -9692,10 +9692,10 @@ react-app-polyfill@^1.0.6:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
-react-csv@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/react-csv/-/react-csv-2.0.1.tgz#5b21d2170f705285d25476a0e28de7f8cab7f0ff"
-  integrity sha512-GK2MVXvEQW1PxaDja2Ksyb487Ae8jC8Kq70vrqwl1KFQojQleK2q/nDxeExe8482jAVLOE+w1qCCZN5Gu5ekKA==
+react-csv@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/react-csv/-/react-csv-2.0.3.tgz#f5d17a3c71107d9bcbe580049350200debdc042a"
+  integrity sha512-exyAdFLAxtuM4wNwLYrlKyPYLiJ7e0mv9tqPAd3kq+k1CiJFtznevR3yP0icv5q/y200w+lzNgi7TQn1Wrhu0w==
 
 react-dev-utils@^10.2.1:
   version "10.2.1"
